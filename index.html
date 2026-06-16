@@ -3,40 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My First Website</title>
-    <style>
-        /* This is where our CSS lives for now */
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            text-align: center;
-            padding: 50px;
-        }
-        button {
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-            background-color: #007BFF;
-            color: white;
-            border: none;
-            border-radius: 5px;
-        }
-    </style>
+    <title>Community Share Hub</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <h1>Welcome to My Website!</h1>
-    <p>I am building this from scratch using HTML, CSS, and JS.</p>
-    
-    <button id="magicButton">Click Me for Magic</button>
+    <header>
+        <h1>🚀 ShareHub</h1>
+        <p>Upload images or drop links to share with the board!</p>
+    </header>
 
-    <script>
-        /* This is where our JavaScript lives */
-        const button = document.getElementById('magicButton');
-        button.addEventListener('click', () => {
-            alert('🎉 It works! You just ran your first JavaScript code!');
-        });
-    </script>
+    <!-- THE UPLOAD ZONE -->
+    <main class="upload-container">
+        <div class="upload-box">
+            <h3>Upload to the Hub</h3>
+            <input type="text" id="itemTitle" placeholder="Give your item a title...">
+            <input type="file" id="itemFile" accept="image/*">
+            <button id="uploadBtn">Upload Item</button>
+        </div>
+    </main>
 
+    <!-- THE DISPLAY BOARD -->
+    <section class="hub-board" id="hubBoard">
+        <!-- Uploaded items will dynamically appear here via JS -->
+    </section>
+
+    <script src="app.js"></script>
 </body>
 </html>
